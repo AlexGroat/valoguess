@@ -10,6 +10,7 @@ return new class extends Migration {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->boolean('in_game_leader')->default(false);
             $table->foreignId('team_id');
             $table->timestamps();
         });
